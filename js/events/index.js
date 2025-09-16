@@ -66,9 +66,14 @@ export const onTextSearchSubmit = async (evt) => {
     if (!search.includes('-')) {
         const chapterNumber = chapterVerse.split(':')[0];
         const verseNumber = chapterVerse.split(':')[1];
+        const books = await getBibleBooks(translation);
+        const bookObject = books.filter(
+            (b) => b['name'].toLowerCase() === book.toLowerCase()
+        )[0];
+
         const bibleVerse = await getBibleVerse(
             translation,
-            book,
+            bookObject['id'],
             chapterNumber,
             verseNumber
         );
