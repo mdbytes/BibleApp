@@ -6,7 +6,6 @@ export const getChapterVerses = async (translation, book, chapter) => {
             `https://bible.helloao.org/api/${translation}/${book}/${chapter}.json`
         ).then((request) => request.json());
         let verses = results.chapter.content;
-        console.log(verses);
         let verseArray = [];
 
         for (let verse of verses) {

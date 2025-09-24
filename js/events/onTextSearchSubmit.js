@@ -76,8 +76,6 @@ export const onTextSearchSubmit = async (evt) => {
                 endingVerse
             );
 
-            console.log(verses);
-
             displayManyVerses(bookName, chapterNumber, beginningVerse, verses);
         } catch (error) {
             console.log(error);

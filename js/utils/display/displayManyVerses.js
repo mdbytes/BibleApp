@@ -10,7 +10,6 @@ export const displayManyVerses = (
     heading.textContent = bookName + ' Chapter ' + chapterNumber;
     resultString.append(heading);
 
-    console.log('verses**', verses);
     for (let verse of verses) {
         let newParagraph = document.createElement('p');
         let textSpan = document.createElement('span');
