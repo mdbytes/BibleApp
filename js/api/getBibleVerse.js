@@ -1,3 +1,4 @@
+import { displayErrorMessage } from '../utils/index.js';
 import { getChapterVerses } from './getChapterVerses.js';
 
 export const getBibleVerse = async (
@@ -6,8 +7,19 @@ export const getBibleVerse = async (
     chapterNumber,
     verseNumber
 ) => {
-    const verses = await getChapterVerses(translation, bookId, chapterNumber);
+    try {
+        const verses = await getChapterVerses(
+            translation,
+            bookId,
+            chapterNumber
+        );
 
-    console.log(verses);
-    return verses[verseNumber - 1];
+        if (!verses[verseNumber - 1]) {
+            throw new Error('verse cannot be found');
+        }
+        return verses[verseNumber - 1];
+    } catch (error) {
+        console.log(error);
+        displayErrorMessage();
+    }
 };

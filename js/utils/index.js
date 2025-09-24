@@ -5,3 +5,4 @@ export { setUpChapterSelectorChange } from './setup/setUpChapterSelectorChange.j
 export { displayChapterVerses } from './display/displayChapterVerses.js';
 export { displayManyVerses } from './display/displayManyVerses.js';
 export { displaySingleVerse } from './display/displaySingleVerse.js';
+export { displayErrorMessage } from './display/displayErrorMessage.js';
