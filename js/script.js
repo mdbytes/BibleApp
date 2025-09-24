@@ -1,7 +1,8 @@
-
-
-import { onWindowLoad, onVerseSelectSubmit, onTextSearchSubmit } from './events/index.js';
-
+import {
+    onWindowLoad,
+    onVerseSelectSubmit,
+    onTextSearchSubmit,
+} from './events/index.js';
 window.addEventListener('load', onWindowLoad);
 
 document

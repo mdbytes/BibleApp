@@ -1,0 +1,22 @@
+{
+  "name": "bibleapp",
+  "version": "1.0.0",
+  "description": "Interacting with REST API using JavaScript.  A bare-bones application written for illustration purposes.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdbytes/BibleApp.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mdbytes/BibleApp/issues"
+  },
+  "homepage": "https://github.com/mdbytes/BibleApp#readme",
+  "dependencies": {
+    "dotenv": "^17.2.2"
+  }
+}
